@@ -1,28 +1,28 @@
 <div class="page-header">
-  <h3>Board #<%= @board.id %></h3>
+  <h1>Board: <%= @board.title %>
+    <small>
+      <%= @board.description %>
+      <a href="/boards" class="btn btn-default">
+        Back
+      </a>
+      <a href="/boards/14/edit" class="btn btn-default">
+        Edit
+      </a>
+      <a href="/delete_board/14" class="btn btn-default" rel="nofollow">
+        Delete
+      </a>
+    </small>
+  </h1>
+  
 </div>
 
 <div class="row">
   <div class="col-md-12 mb-2">
     <dl class="dl-horizontal">
-      <dt>Title</dt>
-      <dd><%= @board.title %></dd>
-
-      <dt>Description</dt>
-      <dd><%= @board.description %></dd>
+      
 
     </dl>
 
-    <div class="btn-group btn-group-justified">
-      <a href="/boards" class="btn btn-default">
-        Back
-      </a>
-      <a href="/boards/<%= @board.id %>/edit" class="btn btn-default">
-        Edit
-      </a>
-      <a href="/delete_board/<%= @board.id %>" class="btn btn-default" rel="nofollow">
-        Delete
-      </a>
-    </div>
+    
   </div>
 </div>
